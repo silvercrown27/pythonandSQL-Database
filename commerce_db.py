@@ -29,7 +29,7 @@ class Users(Model):
     user_name = CharField()
     user_email = CharField()
     location = CharField()
-    contact = IntegerField()
+    contact = CharField()
 
     class Meta(Model):
         database = db
