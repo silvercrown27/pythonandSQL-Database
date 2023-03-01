@@ -2,7 +2,7 @@ from os import path
 from peewee import *
 
 connection = path.dirname(path.realpath(__file__))
-db = SqliteDatabase(path.join("e-commerce"))
+db = SqliteDatabase(path.join("e-commerce.db"))
 
 
 class Staff(Model):
