@@ -26,6 +26,7 @@ class Products(Model):
 
 
 class Users(Model):
+    user_id = CharField()
     user_name = CharField()
     user_email = CharField()
     location = CharField()
