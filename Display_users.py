@@ -20,4 +20,13 @@ def view_staff_members():
         print(member.member_id, member.member_name, member.member_age)
 
 
-view_users()
+choice = int(input('Select Your Option\n 1: View users\n 2: View product\n 3: View staff members\n'))
+
+if choice == 1:
+    view_users()
+elif choice == 2:
+    view_products()
+elif choice == 3:
+    view_staff_members()
+else:
+    print('Select the correct option..')
