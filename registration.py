@@ -12,6 +12,7 @@ class Administration:
             self.add_staff_member()
         else:
             print('Select the correct option..')
+
     def add_user(self):
         try:
             user_id = str(input('Enter Enter ID : '))
@@ -31,13 +32,12 @@ class Administration:
         except ValueError:
             print("Please Enter a correct value")
 
-
     def add_product(self):
         try:
-            prod_id = str(input('Enter Product Name : '))
+            prod_id = str(input('Enter Product ID : '))
             prod_name = str(input('Enter Product Name : '))
-            prod_price = str(input('Enter Product Name : '))
-            quantity = str(input('Enter Quantity Avalable : '))
+            prod_price = str(input('Enter Product Price : '))
+            quantity = str(input('Enter Quantity Available : '))
             description = str(input('Enter Product Description : '))
 
             Products.create(prod_id=prod_id,
@@ -46,11 +46,10 @@ class Administration:
                             quantity=quantity,
                             description=description)
 
-            print('user registration is a success!')
+            print('Product registration is a success!')
 
         except ValueError:
             print("Please Enter a correct value")
-
 
     def add_staff_member(self):
         try:
@@ -61,7 +60,7 @@ class Administration:
             Staff.create(member_id=member_id,
                          member_name=member_name,
                          member_age=member_age)
-            print('user registration is a success!')
+            print('Member registration is a success!')
 
         except ValueError:
             print("Please Enter a correct value")
